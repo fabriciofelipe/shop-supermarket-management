@@ -28,15 +28,6 @@ public class ThrowableTranslator {
     }
 
 
-   public HttpStatus getHttpStatus(){
-        return httpStatus;
-
-    }
-
-    public String getMessage() {
-        return message;
-    }
-
     static <T extends Throwable> Mono<ThrowableTranslator> translate(final Mono<T> throwable) {
         return throwable.flatMap(error -> Mono.just(new ThrowableTranslator(error)));
     }

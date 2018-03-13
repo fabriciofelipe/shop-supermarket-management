@@ -16,7 +16,7 @@ import static org.springframework.web.reactive.function.server.RouterFunctions.r
 public class ApiRouter {
 
     private static final String LOCATION_PATH = "/products";
-    //private static final String ADDRESS_ARG = "/{id}";
+    //private static final String PRODUCTS_ARG = "/{id}";
     private static final String LOCATION_WITH_ADDRESS_PATH = LOCATION_PATH; //+ ADDRESS_ARG;
 
     @Autowired
