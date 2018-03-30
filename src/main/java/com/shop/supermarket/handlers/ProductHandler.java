@@ -2,11 +2,9 @@ package com.shop.supermarket.handlers;
 
 import com.shop.supermarket.domain.Products;
 import com.shop.supermarket.service.ProductsService;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.function.server.ServerRequest;
@@ -14,11 +12,14 @@ import org.springframework.web.reactive.function.server.ServerResponse;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
+
 @Component
 public class ProductHandler {
 
     @Autowired
     private ProductsService productsService;
+
+    @Autowired
     private ErrorHandler errorHandler;
 
 

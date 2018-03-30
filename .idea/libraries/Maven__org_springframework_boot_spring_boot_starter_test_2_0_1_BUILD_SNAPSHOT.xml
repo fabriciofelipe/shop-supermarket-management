@@ -1,13 +1,13 @@
 <component name="libraryTable">
   <library name="Maven: org.springframework.boot:spring-boot-starter-test:2.0.1.BUILD-SNAPSHOT">
     <CLASSES>
-      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-test/2.0.1.BUILD-SNAPSHOT/spring-boot-starter-test-2.0.1.BUILD-20180312.204149-51.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-test/2.0.1.BUILD-SNAPSHOT/spring-boot-starter-test-2.0.1.BUILD-20180321.124006-73.jar!/" />
     </CLASSES>
     <JAVADOC>
-      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-test/2.0.1.BUILD-SNAPSHOT/spring-boot-starter-test-2.0.1.BUILD-20180312.204149-51-javadoc.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-test/2.0.1.BUILD-SNAPSHOT/spring-boot-starter-test-2.0.1.BUILD-20180321.124006-73-javadoc.jar!/" />
     </JAVADOC>
     <SOURCES>
-      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-test/2.0.1.BUILD-SNAPSHOT/spring-boot-starter-test-2.0.1.BUILD-20180312.204149-51-sources.jar!/" />
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-starter-test/2.0.1.BUILD-SNAPSHOT/spring-boot-starter-test-2.0.1.BUILD-20180321.124006-73-sources.jar!/" />
     </SOURCES>
   </library>
 </component>

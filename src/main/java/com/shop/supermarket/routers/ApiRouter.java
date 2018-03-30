@@ -3,6 +3,7 @@ package com.shop.supermarket.routers;
 
 import com.shop.supermarket.handlers.ErrorHandler;
 import com.shop.supermarket.handlers.ProductHandler;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Component;
@@ -13,28 +14,16 @@ import static org.springframework.web.reactive.function.server.RequestPredicates
 import static org.springframework.web.reactive.function.server.RouterFunctions.route;
 
 @Component
+@RequiredArgsConstructor
 public class ApiRouter {
 
     private static final String LOCATION_PATH = "/products";
     //private static final String PRODUCTS_ARG = "/{id}";
     private static final String LOCATION_WITH_ADDRESS_PATH = LOCATION_PATH; //+ ADDRESS_ARG;
 
-    @Autowired
-    ProductHandler productHandler;
+    private final ProductHandler productHandler;
 
-    @Autowired
-    ErrorHandler errorHandler;
-
-    @Bean
-    public ProductHandler productHandler(){
-        return new ProductHandler();
-    }
-
-    @Bean
-    ErrorHandler errorHandler(){
-        return new ErrorHandler();
-    }
-
+    private final ErrorHandler errorHandler;
 
    @Bean
    RouterFunction<?> doRoute(final ProductHandler apiHandler, final ErrorHandler errorHandler) {
