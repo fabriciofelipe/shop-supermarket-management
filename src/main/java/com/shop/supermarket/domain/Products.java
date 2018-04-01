@@ -6,6 +6,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.math.BigDecimal;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -18,5 +20,6 @@ public class Products {
     //frios,higiene pessoal, higiene do lar, bebibas, congelados, outros, frutas vegetais, nao pereciveis,temperos e molhos, padaria
     private String type;
     private Integer amount;
+    private BigDecimal price;
 
 }
