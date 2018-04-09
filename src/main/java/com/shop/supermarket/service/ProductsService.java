@@ -18,7 +18,12 @@ public class ProductsService {
     private final ProductsRepository repository;
 
     public Flux<Products> getProducts(){
-        return repository.findAll().log();
+        return repository.findAll();
+
+    }
+
+    public Flux<Products> getProductsByType(String type){
+        return repository.findByType(type);
 
     }
 }

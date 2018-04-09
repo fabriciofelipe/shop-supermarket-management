@@ -18,7 +18,7 @@ import static org.springframework.web.reactive.function.server.RouterFunctions.r
 public class ApiRouter {
 
     private static final String LOCATION_PATH = "/products";
-    //private static final String PRODUCTS_ARG = "/{id}";
+    private static final String PRODUCTS_ARG = "/products/{type}";
     private static final String LOCATION_WITH_ADDRESS_PATH = LOCATION_PATH; //+ ADDRESS_ARG;
 
     private final ProductHandler productHandler;
@@ -29,6 +29,7 @@ public class ApiRouter {
    RouterFunction<?> doRoute(final ProductHandler apiHandler, final ErrorHandler errorHandler) {
         return
                 route(GET(LOCATION_WITH_ADDRESS_PATH), productHandler::getProducts)
+                        .andRoute(GET(PRODUCTS_ARG), productHandler::getProductsByType)
                        .andOther(route(RequestPredicates.all(), errorHandler::notFound));
 
     }

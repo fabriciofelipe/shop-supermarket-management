@@ -29,6 +29,13 @@ public class ProductHandler {
 
     }
 
+    public Mono<ServerResponse> getProductsByType(ServerRequest request) {
+        String type = request.pathVariable("type");
+        Flux<Products> products  = productsService.getProductsByType(type);
+        return ServerResponse.ok().contentType(MediaType.APPLICATION_JSON).body(products, Products.class);
+
+    }
+
 
 
 }
