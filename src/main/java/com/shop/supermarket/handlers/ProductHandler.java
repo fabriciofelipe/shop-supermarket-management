@@ -14,13 +14,12 @@ import reactor.core.publisher.Mono;
 
 
 @Component
+@RequiredArgsConstructor
 public class ProductHandler {
 
-    @Autowired
-    private ProductsService productsService;
+    private final ProductsService productsService;
 
-    @Autowired
-    private ErrorHandler errorHandler;
+    private final ErrorHandler errorHandler;
 
 
    public Mono<ServerResponse> getProducts(ServerRequest request) {
