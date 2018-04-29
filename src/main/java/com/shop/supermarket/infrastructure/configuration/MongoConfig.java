@@ -25,7 +25,7 @@ public class MongoConfig extends AbstractReactiveMongoConfiguration {
         return MongoClients.create();
     }
 
-    //@Bean
+    @Bean
     public ReactiveMongoTemplate reactiveMongoTemplate() {
         return new ReactiveMongoTemplate(reactiveMongoClient(), getDatabaseName());
     }

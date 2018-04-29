@@ -36,6 +36,15 @@ public class ProductHandler {
 
     }
 
+    public Mono<ServerResponse> addProducts(ServerRequest request){
+           Mono<Products> product = request.bodyToMono(Products.class);
+           return ServerResponse.ok().build(productsService.add(product).then());
+    }
+
+    public Mono<ServerResponse> updateProducts(ServerRequest request){
+        Mono<Products> product = request.bodyToMono(Products.class);
+        return ServerResponse.ok().build(productsService.update(product).then());
+    }
 
 
 }
